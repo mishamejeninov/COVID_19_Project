@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital@1&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+}
+
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.nav_style {
+  background-color: #a29bfe !important;
+}
+
+.nav_style a {
+  color: white;
+}
+
+/* /////////////////// Main Header \\\\\\\\\\\\\\\*/
+
+.main_header {
+  height: 450px;
+  width: 100%;
+}
+
+.rightside h1 {
+  font-size: 5.2rem;
+  text-align: center;
+}
+
+.corona_rot img {
+  animation: corona 3s linear infinite;
+}
+
+.about_res {
+  margin-left: 0 !important;
+}
+
+@keyframes corona {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.leftside img {
+  animation: beat 5s linear infinite;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(.75);
+  }
+
+  20% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(.75);
+  }
+
+  60% {
+    transform: scale(1);
+  }
+
+  80% {
+    transform: scale(.75);
+  }
+
+  100% {
+    transform: scale(.75);
+  }
+}
+
+.containerUp {
+
+  min-width: 290px;
+  max-width: 900px;
+  margin: 15px 260px;
+  text-align: center;
+}
+
+.formUpdate {
+  text-align: center;
+}
+
+#date {
+  color: teal;
+  text-align: center;
+}
+
+.dataTitle {
+  margin: 10px 0;
+}
+
+.formUpdate input {
+  width: 260px;
+  height: 49px;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  padding: 0 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.formUpdate .buttonSrch {
+  width: 250px;
+  height: 50px;
+  border-radius: 25px;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+  background-size: 200%;
+  transition: .5s;
+}
+
+.formUpdate .buttonSrch:hover {
+  background-position: right;
+}
+
+#name-country {
+  color: #555;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.content {
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.content .box {
+  min-width: 270px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.content .box:hover {
+  background: #eee4;
+}
+
+.content .box .parh {
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.confirmed .dataTitle,
+.confirmed i {
+  color: crimson;
+}
+
+.recovered .dataTitle,
+.recovered i {
+  color: green;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* /////////////////// About Section \\\\\\\\\\\\\\\*/
+
+.sub_section {
+  background-color: #fbfafd;
+}
+
+/* /////////////////// Footer \\\\\\\\\\\\\\\*/
+
+.footer_style {
+  background-color: #a29bfe !important;
+}
+
+.footer_style p {
+  margin-bottom: 0 !important;
+}
+
+/* /////////////////// Start Rasponsive \\\\\\\\\\\\\\\ */
+
+@media(max-width:768px) {
+  .main_header {
+    height: 700px;
+    text-align: center;
+  }
+
+  .main_header h1 {
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    font-size: 36px;
+  }
+}
+
+/* /////////////////// End Rasponsive \\\\\\\\\\\\\\\ */
+
+/* /////////////////// Start Back To Top \\\\\\\\\\\\\\\ */
+
+#back-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  font-size: 26px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  border: 3px solid #333;
+  border-radius: 50%;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-property: background-color, color;
+}
+
+#back-to-top-btn:hover,
+#back-to-top-btn:focus {
+  background-color: #333;
+  color: #fff;
+}
+
+@media(max-width: 992px) {
+  #back-to-top-btn {
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    bottom: 30px;
+    right: 15px;
+  }
+}
+
+@media(max-width:768px) {
+
+  #back-to-top-btn {
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    bottom: 50px;
+    right: 6px;
+  }
+}
+
+/* /////////////////// Animations \\\\\\\\\\\\\\\ */
+.btnEntrance {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: btnEntrance;
+}
+
+/* /////////////////// zoomIn \\\\\\\\\\\\\\\*/
+@keyframes btnEntrance {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* /////////////////// fadeInUp \\\\\\\\\\\\\\\*/
+@keyframes btnEntrance {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.btnExit {
+  animation-duration: 0.25s;
+  animation-fill-mode: both;
+  animation-name: btnExit;
+}
+
+/* /////////////////// zoomOut \\\\\\\\\\\\\\\*/
+@keyframes btnExit {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+
+/* /////////////////// fadeOutDown \\\\\\\\\\\\\\\*/
+@keyframes btnExit {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+/* /////////////////// End Back To Top \\\\\\\\\\\\\\\ */
+
+/* ///////////////////// Start Form Button //////////////////*/
+
+.contactUs .buttonSrch {
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(to right, #3a6bf1, #afaaf0, #008bfd);
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+  background-size: 200%;
+  transition: .5s;
+}
+
+.contactUs .buttonSrch:hover {
+  background-position: right;
+}
+
+/* ///////////////////// End Form Button //////////////////*/
